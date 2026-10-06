@@ -1,0 +1,54 @@
+<!-- COSMO CONSULT Header. Logo niemals durch Textplatzhalter ersetzen. -->
+<header class="cc-header">
+  <div class="cc-container cc-header__inner">
+    <a class="cc-header__brand" href="/" aria-label="COSMO CONSULT Startseite">
+      <img src="assets/icons/brand/cosmo-logo.svg" alt="COSMO CONSULT" width="36" height="36" />
+      <span class="cc-header__title">COSMO CONSULT</span>
+    </a>
+    <nav class="cc-header__nav" aria-label="Hauptnavigation">
+      <a href="#leistungen">Leistungen</a>
+      <a href="#loesungen">Lösungen</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .cc-header {
+    background: var(--cc-anthracite);
+    border-bottom: 2px solid var(--cc-gold);
+  }
+  .cc-header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-4);
+    min-height: 72px;
+  }
+  .cc-header__brand {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    color: var(--text-invert);
+    border-bottom: 0;
+  }
+  .cc-header__title {
+    font-weight: var(--cc-fw-head);
+    letter-spacing: 0.08em;
+  }
+  .cc-header__nav {
+    display: flex;
+    gap: var(--space-4);
+  }
+  .cc-header__nav a {
+    color: var(--text-invert);
+    border-bottom: 1px solid transparent;
+  }
+  .cc-header__nav a:hover {
+    color: var(--cc-gold);
+    border-bottom-color: var(--cc-gold);
+  }
+  @media (max-width: 640px) {
+    .cc-header__inner { flex-direction: column; align-items: flex-start; padding-block: var(--space-3); }
+  }
+</style>

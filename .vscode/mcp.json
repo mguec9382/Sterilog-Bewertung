@@ -1,0 +1,23 @@
+{
+  "servers": {
+    "cosmo-mcp": {
+      "type": "http",
+      "url": "https://parrot-mcp-v1.azurewebsites.net",
+      "headers": {
+        "Authorization": "Bearer ${input:platform_token_v2}"
+      }
+    },
+    "cosma": {
+      "type": "http",
+      "url": "https://cosma.app/mcp"
+    }
+  },
+  "inputs": [
+    {
+      "id": "platform_token_v2",
+      "type": "promptString",
+      "description": "COSMO Platform Token",
+      "password": true
+    }
+  ]
+}

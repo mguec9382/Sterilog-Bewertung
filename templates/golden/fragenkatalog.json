@@ -1,0 +1,107 @@
+{
+  "id": "golden-template-kapitel-10",
+  "version": "1.0.0",
+  "status": "must-have",
+  "titel": "Golden Template – Kapitel 10: Anforderungen an den Partner",
+  "quelle": "bewertung-graphax-ag-v1.5.0.html (Graphax AG), verallgemeinert mit Platzhaltern",
+  "vorlage": "golden-kapitel-10.html",
+  "regel": "Beantwortet der Fragenkatalog einer Ausschreibung eines der folgenden Kapitel mit \"ja\", wird die zugeordnete Sektion aus der Vorlage in die neue HTML-Struktur eingebunden. Kapitel ohne \"ja\" werden nicht übernommen.",
+  "kapitel": [
+    {
+      "frage": "K10.1",
+      "nr": "10.1",
+      "titel": "Unternehmensprofil des Anbieters",
+      "anker": "k101",
+      "marker": "golden:chapter id=\"10.1\"",
+      "mustHave": true
+    },
+    {
+      "frage": "K10.2",
+      "nr": "10.2",
+      "titel": "Branchen- und Projekterfahrung, Referenzen",
+      "anker": "k102",
+      "marker": "golden:chapter id=\"10.2\"",
+      "mustHave": true
+    },
+    {
+      "frage": "K10.3",
+      "nr": "10.3",
+      "titel": "Team und Ressourcen",
+      "anker": "k103",
+      "marker": "golden:chapter id=\"10.3\"",
+      "mustHave": true
+    },
+    {
+      "frage": "K10.5",
+      "nr": "10.5",
+      "titel": "Implementierungsplan",
+      "anker": "k105",
+      "marker": "golden:chapter id=\"10.5\"",
+      "mustHave": true
+    },
+    {
+      "frage": "K10.6",
+      "nr": "10.6",
+      "titel": "Migrationskonzept",
+      "anker": "k106",
+      "marker": "golden:chapter id=\"10.6\"",
+      "mustHave": true
+    },
+    {
+      "frage": "K10.7",
+      "nr": "10.7",
+      "titel": "Testkonzept sowie Release- und Deploymentplan",
+      "anker": "k107",
+      "marker": "golden:chapter id=\"10.7\"",
+      "mustHave": true
+    },
+    {
+      "frage": "K10.8",
+      "nr": "10.8",
+      "titel": "Schulungs- und Change-Management-Konzept",
+      "anker": "k108",
+      "marker": "golden:chapter id=\"10.8\"",
+      "mustHave": true
+    },
+    {
+      "frage": "K10.9",
+      "nr": "10.9",
+      "titel": "Support- und Wartungsmodell nach Go-Live",
+      "anker": "k109",
+      "marker": "golden:chapter id=\"10.9\"",
+      "mustHave": true
+    }
+  ],
+  "nichtEnthalten": [
+    {
+      "nr": "10.4",
+      "titel": "Projektorganisation des Interessenten",
+      "grund": "Vollständig kundenspezifisch, wird je Ausschreibung neu erstellt."
+    },
+    {
+      "nr": "10.10",
+      "titel": "Lizenz- und Preismodell",
+      "grund": "Kalkulationsspezifisch, wird je Ausschreibung aus der Kalkulationsdatei erzeugt."
+    }
+  ],
+  "platzhalter": {
+    "{{INTERESSENT}}": "Name des Interessenten, zum Beispiel Muster AG",
+    "{{ALT_SYSTEM}}": "Abzulösendes Vorgängersystem, zum Beispiel Microsoft Dynamics NAV 2017",
+    "{{LAND}}": "Land der lokalen Niederlassung, zum Beispiel die Schweiz",
+    "{{STANDORT_ORT}}": "Ort der lokalen Niederlassung, zum Beispiel Schlieren",
+    "{{STANDORT_REGION}}": "Regionsangabe zum Standort, zum Beispiel bei Zürich",
+    "{{TEAM_GROESSE}}": "Größe des lokalen Stammteams, zum Beispiel rund 20 bis 25",
+    "{{EINTRAG_SEIT}}": "Jahr der Handelsregistereintragung der Landesgesellschaft, zum Beispiel 2015",
+    "{{KICKOFF_TERMIN}}": "Geplanter Kick-off-Termin aus dem Anforderungsheft",
+    "{{ZEITRAUM_INITIATE}}": "Zeitraum der Phase Initiate & Scoping",
+    "{{ZEITRAUM_BUILD}}": "Zeitraum der Phase Build & Implement",
+    "{{ZEITRAUM_PREPARE}}": "Zeitraum der Phase Prepare",
+    "{{ZEITRAUM_OPERATE}}": "Zeitraum ab dem Produktivstart (Phase Operate)",
+    "{{GOLIVE_TERMIN}}": "Geplanter Go-live-Termin",
+    "{{PT_STRATEGIZE}}": "Aufwand der Phase Strategize in Personentagen",
+    "{{PT_INITIATE}}": "Aufwand der Phase Initiate & Scoping in Personentagen",
+    "{{PT_BUILD}}": "Aufwand der Phase Build & Implement in Personentagen",
+    "{{PT_PREPARE}}": "Aufwand der Phase Prepare in Personentagen",
+    "{{PT_OPERATE}}": "Aufwand der Phase Operate in Personentagen"
+  }
+}

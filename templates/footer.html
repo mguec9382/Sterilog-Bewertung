@@ -1,0 +1,32 @@
+<!-- COSMO CONSULT Footer. -->
+<footer class="cc-footer">
+  <div class="cc-container cc-footer__inner">
+    <p class="cc-footer__claim">COSMO CONSULT — Digitalisierung, die Menschen weiterbringt.</p>
+    <nav class="cc-footer__nav" aria-label="Rechtliches">
+      <a href="#impressum">Impressum</a>
+      <a href="#datenschutz">Datenschutz</a>
+    </nav>
+  </div>
+</footer>
+
+<style>
+  .cc-footer {
+    background: var(--cc-anthracite);
+    border-top: 2px solid var(--cc-gold);
+    color: var(--text-invert);
+    margin-top: var(--space-7);
+  }
+  .cc-footer__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-4);
+    padding-block: var(--space-4);
+  }
+  .cc-footer__claim { margin: 0; }
+  .cc-footer__nav { display: flex; gap: var(--space-4); }
+  .cc-footer__nav a { color: var(--cc-gold); }
+  @media (max-width: 640px) {
+    .cc-footer__inner { flex-direction: column; align-items: flex-start; }
+  }
+</style>

@@ -1,0 +1,239 @@
+/* COSMO CONSULT — CI-Tokens.
+   Quelle: Workshop- & Angebots-Kalkulations-Plattform (src/index.css, tailwind.config.js).
+   Werte unverändert übernehmen. */
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap");
+
+:root {
+  /* Marke */
+  --cc-gold: #b39c4d;
+  --cc-gold-light: #c9b672;
+  --cc-gold-dark: #9a8340;
+  --cc-anthracite: #1b212e;
+  --cc-anthracite-light: #2a3242;
+  --cc-ink: #0f131c;
+
+  /* Scope-Farben (analog MBPC-Prozessschaubild) */
+  --sc-in: #2f7d4f;
+  --sc-opt: #c7962e;
+  --sc-out: #aa4628;
+
+  /* Prozessgruppen-Farben */
+  --grp-primary: #b39c4d;
+  --grp-support: #838da1;
+  --grp-manage: #ff671e;
+  --grp-regulated: #2e7d8a;
+
+  /* Semantische Flächen (Light) */
+  --app-bg: #f4f5f7;
+  --surface: #ffffff;
+  --surface-2: #f8fafc;
+  --border: #e2e8f0;
+  --text: #1b212e;
+  --text-muted: #64748b;
+  --text-invert: #ffffff;
+
+  /* Typografie */
+  --cc-font: "Quicksand", system-ui, "Segoe UI", sans-serif;
+  --cc-fw-text: 400;
+  --cc-fw-head: 500;
+
+  /* Abstände (8px-Raster) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 32px;
+  --space-6: 48px;
+  --space-7: 64px;
+  --space-8: 96px;
+
+  /* Radien */
+  --radius-card: 12px; /* rounded-xl */
+  --radius-control: 8px; /* rounded-lg */
+  --radius-pill: 9999px;
+
+  /* Elevation — ausschließlich diese beiden Stufen verwenden */
+  --elev-rest: 0 1px 2px rgba(27, 33, 46, 0.05);
+  --elev-hover: 0 10px 24px rgba(27, 33, 46, 0.12);
+
+  --transition: 0.24s ease;
+  --cc-maxwidth: 1200px;
+}
+
+.dark {
+  --app-bg: #0f141d;
+  --surface: #1c2230;
+  --surface-2: #161b26;
+  --border: #2d3644;
+  --text: #e5e9f0;
+  --text-muted: #94a3b8;
+  --elev-hover: 0 10px 24px rgba(27, 33, 46, 0.14);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--cc-font);
+  font-weight: var(--cc-fw-text);
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--app-bg);
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: var(--cc-fw-head);
+  text-align: left;
+  margin: 0 0 var(--space-3);
+  line-height: 1.25;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 1.75rem; }
+h3 { font-size: 1.25rem; }
+
+em { font-style: italic; }
+
+a {
+  color: var(--cc-gold);
+  text-decoration: none;
+  border-bottom: 1px solid var(--cc-gold);
+}
+
+a:hover { color: var(--cc-gold-dark); }
+
+:focus-visible {
+  outline: 2px solid var(--cc-gold);
+  outline-offset: 2px;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--cc-gold);
+  margin: var(--space-5) 0;
+}
+
+.cc-container {
+  width: 100%;
+  max-width: var(--cc-maxwidth);
+  margin: 0 auto;
+  padding: 0 var(--space-4);
+}
+
+/* Karten */
+.cc-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: var(--space-4);
+  box-shadow: var(--elev-rest);
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.cc-card--accent {
+  border-left: 4px solid var(--grp, var(--cc-gold));
+}
+
+.cc-card:hover {
+  box-shadow: var(--elev-hover);
+}
+
+/* Buttons */
+.cc-btn {
+  display: inline-block;
+  padding: var(--space-2) var(--space-4);
+  font-family: var(--cc-font);
+  font-weight: var(--cc-fw-head);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--cc-anthracite);
+  background: var(--cc-gold);
+  border: 1px solid var(--cc-gold);
+  border-radius: var(--radius-control);
+  cursor: pointer;
+}
+
+.cc-btn:hover { background: var(--cc-gold-dark); border-color: var(--cc-gold-dark); }
+
+.cc-btn--ghost {
+  color: var(--cc-gold);
+  background: transparent;
+}
+
+/* Formulare */
+.cc-label {
+  display: block;
+  margin-bottom: var(--space-1);
+  font-weight: var(--cc-fw-head);
+  color: var(--text-muted);
+}
+
+.cc-input {
+  width: 100%;
+  padding: var(--space-2) var(--space-3);
+  font-family: var(--cc-font);
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-control);
+}
+
+.cc-input:focus { border-color: var(--cc-gold); outline: none; }
+
+/* Kennzahlen */
+.cc-kpi {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--cc-gold);
+  border-radius: var(--radius-card);
+  padding: var(--space-3) var(--space-4);
+}
+
+/* Tabellen */
+.cc-th {
+  text-align: left;
+  font-weight: var(--cc-fw-head);
+  color: var(--text-muted);
+  background: var(--surface-2);
+  border-bottom: 1px solid var(--border);
+  padding: var(--space-2) var(--space-3);
+}
+
+.cc-td {
+  border-bottom: 1px solid var(--border);
+  padding: var(--space-2) var(--space-3);
+}
+
+/* Scope-Badges */
+.scope-in,
+.scope-opt,
+.scope-out,
+.scope-unset {
+  display: inline-block;
+  padding: 2px var(--space-3);
+  border-radius: var(--radius-pill);
+  font-size: 0.8125rem;
+  font-weight: var(--cc-fw-head);
+  color: var(--text-invert);
+}
+
+.scope-in { background: var(--sc-in); }
+.scope-opt { background: var(--sc-opt); }
+.scope-out { background: var(--sc-out); }
+.scope-unset { background: transparent; color: var(--text-muted); border: 1px solid var(--border); }
+
+@media print {
+  .cc-no-print { display: none !important; }
+  body { background: #fff; }
+  .cc-card { box-shadow: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; }
+}
